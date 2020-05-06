@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Change HTML content</title>
+        <style>
+            .FaceBook{
+                background-color:#4267B2;
+                color: white;
+                height: 100px;
+                width:auto;
+            }
+            
+            .Twitter{
+                background-color:#1DA1F2;
+                color:white;
+                height:100px;
+                width:auto;
+            }
+            .WhatsApp{
+                background-color:#00E676;
+                color:#FFFFFF;
+                height:100px;
+                width:auto;
+            }
+            .Gods{
+                background-color: aqua;           font-style: normal;
+                font-size: 20px;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <h1>Div and Spans</h1>
+        <p>Divisons are used to style the block elements.</p>
+        <div class="FaceBook" id="facebook">
+        <p>Facebook</p>
+        </div>
+        
+        <div class="Twitter" id="twitter">
+        <p>Twitter</p>
+        </div>
+        
+        <div class="WhatsApp" id="whatsapp">
+        <p>WhatsApp</p>
+        </div>
+        
+       <button id="fbButton">Change Facebook Content.</button>
+        <button id="twButton">Change Twitter Content.</button>
+        <button id="waButton">Change Whatsapp Content</button>
+        <script>
+           
+//           Events are : 
+//            Inner HTML:To chnage html contents
+//            onclick/ondblclick:to change onclick evnets
+      document.getElementById("fbButton").onclick = function(){               
+                document.getElementById("facebook").innerHTML = "<p>Anything it can be list , paragraph ,tag ,etc</p>";                
+            }
+            document.getElementById("twButton").ondblclick = function(){
+                document.getElementById("twitter").innerHTML = "<ul><li>Name: Roshan Raut</li><li>Game: Coding</li><li>Year: 2nd Year</li></ul>";
+            }
+            
+            document.getElementById("waButton").onclick = function(){
+                document.getElementById("whatsapp").innerHTML = "<ul><li>Whats App Messanger</li><li>Web WhatsApp</li><li>Staus Change</li></ul>";
+            }
+        </script>
+        
+    </body>      
+
+</html>

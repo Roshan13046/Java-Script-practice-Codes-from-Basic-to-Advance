@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Change HTML using Varaibles</title>
+        <style>
+            .FaceBook{
+                background-color:#4267B2;
+                color: white;
+                height: 100px;
+                width:auto;
+            }
+            
+            .Twitter{
+                background-color:#1DA1F2;
+                color:white;
+                height:100px;
+                width:auto;
+            }
+            .WhatsApp{
+                background-color:#00E676;
+                color:#FFFFFF;
+                height:100px;
+                width:auto;
+            }
+            .Gods{
+                background-color: aqua;           font-style: normal;
+                font-size: 20px;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <h1>Div and Spans</h1>
+        <p>Divisons are used to style the block elements.</p>
+        <div class="FaceBook" id ="fbook">
+        <p>Facebook</p>
+        </div>
+        
+        <div class="Twitter" id="twt">
+        <p>Twitter</p>
+        </div>
+        
+        <div class="WhatsApp" id="wapp">
+        <p>WhatsApp</p>
+        </div>
+        <button id="fbButton">Change style of Face Book</button>
+        <button id="twtButton">change the style of Twitter</button>
+        <button id="wappButton">Change style of What's App</button>
+        
+        <script>
+          var color = "RED";
+        document.getElementById("fbButton").onclick = function(){
+            document.getElementById("fbook").style.backgroundColor = color;
+        }    
+            document.getElementById("wappButton").onclick = function(){
+               var x,y,z; 
+                x = Math.round(Math.random()*256);
+                y = Math.round(Math.random()*256);
+                z = Math.round(Math.random()*256);
+               var Whatscolor = "rgb("+x+","+y+","+z+")"; document.getElementById("wapp").style.backgroundColor = Whatscolor;
+            }
+            
+        document.getElementById("twtButton").onclick = function(){
+            var x,y,z;
+            x=Math.round(Math.random()*200);
+            y=Math.round(Math.random()*26);
+            z=Math.round(Math.random()*22);
+            
+            var twitColor = "rgb("+x+","+y+","+z+")";
+            document.getElementById("twt").style.backgroundColor = twitColor ;
+        }
+            
+        </script>       
+    </body>      
+
+</html>

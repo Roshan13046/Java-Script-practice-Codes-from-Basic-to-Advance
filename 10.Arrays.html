@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Arrays</title>    
+</head>
+<body>
+    <p id="para">Arrays :</p>
+    <script>
+        var basket=["meat","egg","bread","butter"];
+         document.getElementById("para").innerHTML = basket;
+        
+        //or another way using Object and new key
+        var basket = new Array("meat","egg","bread","butter");
+        document.getElementById("para").innerHTML +=  "<br>"+ basket;
+        
+        document.getElementById("para").innerHTML +=  "<br>"+ basket[0];
+        
+        document.getElementById("para").innerHTML +=  "<br>"+ basket[1];
+        document.getElementById("para").innerHTML +=  "<br>"+ basket[2];
+        document.getElementById("para").innerHTML +=  "<br>"+ basket[3];
+        
+      
+        //using function showBasketElement
+        showBasketElement(basket[0]);
+        showBasketElement(basket[1]);
+        
+        function showBasketElement(x){            document.getElementById("para").innerHTML += "<br>"+ x;
+        }
+        //changing the array content
+        basket[3]="Fish";
+        basket[0]="Apples and Mangoes";
+        showBasketElement(basket);
+        
+        //to delete a item from array object
+        
+        delete basket[2];
+        showBasketElement(basket);
+    </script>
+</body>    
+
+</html>

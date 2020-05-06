@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Variables and Data Types</title>
+        <style>
+            .FaceBook{
+                background-color:#4267B2;
+                color: white;
+                height: 100px;
+                width:auto;
+            }
+            
+            .Twitter{
+                background-color:#1DA1F2;
+                color:white;
+                height:100px;
+                width:auto;
+            }
+            .WhatsApp{
+                background-color:#00E676;
+                color:#FFFFFF;
+                height:100px;
+                width:auto;
+            }
+            .Gods{
+                background-color: aqua;           font-style: normal;
+                font-size: 20px;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <h1>Div and Spans</h1>
+        <p>Divisons are used to style the block elements.</p>
+        <div class="FaceBook">
+        <p>Facebook</p>
+        </div>
+        
+        <div class="Twitter">
+        <p>Twitter</p>
+        </div>
+        
+        <div class="WhatsApp">
+        <p>WhatsApp</p>
+        </div>
+        <script>
+            var x;
+            window.console.log(x);
+            var y;
+            y=5;
+            var y = 8;
+            window.console.log("the Value of y is "+y);
+            var z = x + y;
+            window.console.log("the val of x is "+z);
+            x = 3;
+            z = x + y + "first added then appended ";
+            window.console.log(z);
+            z = "gets Appended " + x + y;
+            window.console.log(z);
+            
+            window.console.log("The type of z is "+typeof(z));
+            
+            var s = " Roshan "+1+3+" Raut";
+            window.console.log("The value of msg "+z);
+            window.console.log("The type of s var is : "+typeof(s));
+            
+            var check = (4 === 4);
+            window.console.log("The alue of check is : "+ check);            
+            window.console.log("The type of check is : "+typeof(check));
+            
+            var myArray = [1,2,3,4,5];
+            window.console.log(myArray);
+            window.console.log("The Type of array is : "+typeof(myArray));
+            
+//            Array are one ype of Objects
+        </script>
+       
+    </body>      
+
+</html>

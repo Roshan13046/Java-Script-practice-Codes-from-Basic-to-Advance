@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Object Using New Keyword</title>    
+</head>
+<body>
+    <p>PARAGRAPH</p>
+    <script>        
+        var Student = {
+            name : "Roshan",
+            age : 5,
+            School : "CXPP",
+            Section :"Science",
+        };
+        window.console.log(Student);
+        var student2 = Student;
+        student2.name = "lakhan";
+        window.console.log(Student);
+        window.console.log(student2);
+                        
+        var Employee = new Object();
+        Employee.name = "Ramesh";
+        Employee.age = 40;
+        Employee.education = "BE";
+        window.console.log(Employee);
+        Employee.name ="Roshan";
+        window.console.log(Employee);
+        
+//        Creating objects using Constructor
+        function 
+        Vehicle (name,type,seater,fuel,company){
+            this.name = name;
+            this.type = type;
+            this.seater = seater;
+            this.fuel = fuel;
+            this.company = company;
+            this.speed = 0;
+            
+            //functions of objects
+            this.vehicleSpeedCalculator = function(speed){
+                return speed * 3600;
+            }
+            
+            this.getFuelType = function(){
+                return this.fuel
+            }
+            
+            this.getSeater = function(){
+                return this.seater;
+            }
+            
+            this.getName = function(){
+                return this.name;
+            }
+        }
+        
+        var car = new Vehicle("Innova","Traveller",13,"Diesel","Toyota");
+        window.console.log(bus);
+        
+        var bus = new Vehicle("Luxury","Tourist",45,"Diesel","Swaraj");
+        window.console.log(bus);
+        
+        var busSpeed = bus.vehicleSpeedCalculator(60);
+        window.console.log(busSpeed);
+        
+        
+        window.console.log("Fuel Type : "+bus.getFuelType() +" ,Bus Name :  " +bus.getName()+" ,Bus Seats Total :  "+bus.getSeater());
+        
+        
+        var bike = new Vehicle();
+        window.console.log(bike);
+        
+        var cycle = new Vehicle("Ranger");
+        window.console.log(cycle);
+        
+        //To add a new Property to the object 
+        //syntax : objectName.propertyName = itsvalue;
+        
+        cycle.currentCondition = " Good ";
+     window.console.log(cycle.currentCondition);
+        
+        cycle.hasCarrier = true;
+    window.console.log(cycle.hasCarrier);
+        
+        //Note: But this property is not included in the class prototype to all objects of type vehicle class eg
+        window.console.log(cycle);
+        window.console.log(bike);
+        
+        
+        //To add new property to this class we use the syntax
+       //Note:we use keyWord : (prototype) //constructorName.prototype.newpropertyName = valueOfNewProperty;
+        
+        Vehicle.prototype.currentCondition = "Good ";
+     window.console.log(cycle.currentCondition);
+        
+        Vehicle.prototype.hasCarrier = true;
+    window.console.log(cycle.hasCarrier);
+        window.console.log(bike);
+        
+    </script>
+</body>    
+
+</html>

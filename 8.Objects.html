@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Objects </title>    
+</head>
+<body>
+    <p>PARAGRAPH</p>
+    <script>
+        var Phone = {
+            color : "Red",
+            model : "Ax21.3",
+            brand : "Samsung",
+            battery : 4
+        };
+        window.console.log(Phone);
+        window.console.log(Phone.color);
+        delete Phone.battery;
+        window.console.log(Phone);
+        window.console.log(typeof(Phone));
+//        window.cosole.log(Phone.battery);
+        
+        var AnotherPhone = Phone;
+        //If we change something in otherPhone/Phone var it will also change the content of both the  object also ie it is by Reference .Eg
+        
+        AnotherPhone.brand = "Nokia Lumia 8";
+        window.console.log(Phone);
+        window.console.log(AnotherPhone);
+        
+        Phone.brand = "Lava";
+        window.console.log(Phone);
+        window.console.log(AnotherPhone);
+        
+        var Student = {
+            name : "Roshan",
+            age : 5,
+            School : "PVGCOET",
+            Section :"Enginering",
+        };
+        window.console.log(Student);
+        var student2 = Student;
+        student2.name = "lakhan";
+        window.console.log(Student);
+        window.console.log(student2);
+    </script>
+</body>    
+
+</html>

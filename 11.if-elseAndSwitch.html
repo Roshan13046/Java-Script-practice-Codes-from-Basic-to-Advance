@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>if-Else and switch</title>
+    </head>
+    <body>
+        <p>Speed on the road :<input id="speed" type="number"/><button onclick="checkSpeed()">Check speed</button> </p>
+        
+        <p>Age of the person:<input id="age" type="number"/><button onclick="checkAge()">Check age</button></p>
+        
+        <p>Percentage of the student:<input id="marks" type="number"/><button onclick="checkGrade()">Check Grade</button></p>
+        
+        <p>Name of Fruit:<input id="fruit"/><button onclick="checkTaste()">Check Taste</button></p>
+        
+        <script>        
+            
+            function checkSpeed(){
+                var speed = document.getElementById("speed").value;//Note:value
+                if(speed > 80){
+                    window.alert("You are going too fast");
+                }else if(speed <= 60 && speed>=30){
+                    window.alert("You are within speed limit");
+                }else if(speed <30) {
+                    window.alert("you are going too slow");
+                }
+            }
+            
+            
+            function checkAge(){
+                var age = document.getElementById("age").value;
+                
+                if(age>65){
+                    window.alert("You are Senior citizen");
+                }else if(age >35 && age <=65 ){
+                    window.alert("You are older .");
+                }else if(age >18 && age<=35){
+                    window.alert("you are younger .")
+                }else if(age <=18 && age>=12){
+                    window.alert("you are teenager.");
+                }else{
+                    window.alert("you are a small child");
+                }
+            }
+            
+            function checkGrade(){
+                var percentage = document.getElementById("marks").value;
+                
+                if(percentage >= 90){
+                    window.alert("you have Outstading Score");
+                }else if(percentage >=75 && percentage<=90){
+                    window.alert("You are in Distinction");
+                }else if(percentage>=65 && percentage<75){
+                    window.alert("You have Very Good Score");
+                }else if(percentage>=50 && percentage<65 ){
+                    window.alert("you are Pass");
+                }else{
+                    window.alert("You are fail,,Improve yourself");
+                }
+            }
+            
+            function checkTaste(){
+                var fruitName = document.getElementById("fruit").value.toLowerCase();//Note:toLowerCase();
+                switch(fruitName){
+                    case "grapes":
+                        window.alert("Watery Fruit")  ;
+                        break;
+                    case "orange":
+                        window.alert("Sour fruit");
+                        break;
+                    case "chickoo" :
+                        window.alert("Sweet Fruit");
+                        break;
+                    default:
+                        window.alert("Not among the Known Fruits");
+                }
+            }
+        
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>alert Message</title>    
+</head>
+<body>
+   <p id="myParagraph">JavaScript</p>
+    <script>
+        window.alert("Welcome to our page");        
+        var accepCookies = window.confirm("Please confirm you accept Our Terms and Coditions.");
+    //    window.alert(accepCookies);
+        
+        if(accepCookies == true){
+            window.alert("You confirm you accept Term's and Condition's.");
+        }else{
+            window.alert("You don't accept our condition's.");
+        }
+        
+        var visitor = prompt("Please Enter your Name ,")//for inputs
+        window.alert("Hi! "+visitor+" , we wish you a nice Experience on our page. ")
+    </script>
+    
+</body>    
+
+</html>

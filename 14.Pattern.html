@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Regular Expressions</title>    
+</head>
+<body>
+<!--    Regular exp are quite powerful tool to validate the user input .
+they are used to validate emails, tel ph no etc-->
+    
+    
+    <script>
+        var str="AabcBcC";
+        var pattern =/C/i;//i:case insensitive search /a/:a is pattern to search in string
+        window/alert(str.search(pattern)); //o/p: 6
+        
+        var pat2=/cC/g;//g:Case sensitive search 
+        window.alert(str.search(pat2));            //o/p:5
+        
+        
+        //Match function returns the instance ie the first Occcuring element in the string
+        var pat2=/cC/g;//g:Case sensitive search 
+        window.alert(str.match(pat2));            //o/p:cC
+        
+        var pat2=/E/g;//g:Case sensitive search 
+        window.alert(str.match(pat2));            //o/p:null
+        
+        var pat2=/b/g;//g:Case sensitive search 
+        window.alert(str.match(pat2));            //o/p:b
+        
+        var pat2=/b/g;//g:Case sensitive search 
+        window.alert(str.search(pat2));            //o/p:2
+        
+        //test function :it returns the boolean function if the pattern is present in the string 
+        
+        var pat2=/Aa/g;
+        window.alert(pat2.test(str));//true // note :syntax is patterntoSearch.test(parentString);                
+    </script>
+    
+    
+    <p>String:<span id="string"></span></p>
+    <p>Pattern:<span id="pattern"></span></p>
+    <p>Result(search) :<span id="search"></span> </p>
+    <p>Result(match):<span id="match"></span></p>
+    <p>Result(test):<span id="test"></span></p>
+    <script>
+        var str="Atlanta";
+        var pattern = /a/g;
+        show(pattern);
+        function show(x){
+            document.getElementById("string").innerHTML = str;
+            document.getElementById("pattern").innerHTML = pattern ;
+            document.getElementById("search").innerHTML = str.search(pattern);
+            document.getElementById("match").innerHTML = str.match(pattern);
+            document.getElementById("test").innerHTML = pattern.test(str);    
+        }
+        var pattern = /a/g;
+        //can also be written as
+        var pattern = new RegExp("a","g");
+        
+        show(pattern);
+        //to search a pattern of alphabets bt a to z
+        pattern = /[a-z]/g;
+        show(pattern);
+        
+        pattern = /[a-z]/i;
+        show(pattern);
+        
+        pattern = /[A-Z]/g;
+        show(pattern);
+        
+        pattern = /[^A-Z]/i;//carat sign is to look for all the other element except pattern eleemnts
+        show(pattern);
+        
+        str ="123AbCc45";
+        pattern = /[1-3]/g;
+        show(pattern);
+        
+        pattern = /[^1-3]/g;
+        show(pattern);
+        
+        //to check any digits in string
+        pattern = /\d/g;
+        show(pattern);
+        
+        //to check any alphanumeric character
+        pattern = /\w/g;
+        show(pattern);
+        
+        //to check non alphanumeric characters
+        pattern = /\W/g;
+        show(pattern);
+        
+        //to check for spaces 
+        pattern = /s/g;
+        show(pattern);
+        
+        //to check for continuous digits in string
+        pattern = /\d{2}/g;
+        show(pattern);
+        
+        str = "12 345 4567"
+        pattern = /\d{4}/g;
+        show(pattern);
+        
+        pattern = /\d{10}/g;
+        show(pattern);
+        
+        //to check if any character is prensent at first index or not
+        pattern =/^12/g;
+        show(pattern);
+        
+        str ="12 \n 233"
+        //to check for line break
+        pattern = /\n/g;
+        show(pattern);
+        
+        //to check if any character is prensent at first index or not
+        pattern =/^12/g;
+        show(pattern);
+        
+        str ="A bCC";
+        pattern =/^A/g;
+        show(pattern);
+        
+        pattern =/^C/g;//C is not present as  first character in string
+        show(pattern);
+        
+    </script>
+    
+</body>    
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>setInterval and setTimeout</title>
+    </head>
+    <body>
+<!--here we are using functions:
+setInterval(function,duration) and clearInterval(counterVariable);
+setTimeout(function , duration in millisec) and clearTimeout(variable);
+
+-->
+        
+        
+        <p id="counter">0</p>
+        <button onclick="clearInterval(myCounter)">Stop Counting</button><br/>
+        <button onclick="clearTimeout(delayMsg)">Avoid Welcome msg</button>
+        <script>
+            var counter = document.getElementById("counter");
+            var x = 0;
+            var myCounter = setInterval(function(){x++;counter.innerHTML = x},1000);//function and duration(in milli seconds) are the parameters
+            
+            var delayMsg = setTimeout(function(){window.alert("Welcome to our Page")},3000);
+        </script>
+                
+    
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Errors</title>    
+    <style>
+        #error{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p id="error">Error</p>
+    <script>
+        try{
+            sum(3,4);
+        }catch(e){
+            document.getElementById("error").innerHTML = e.message;
+        }
+        
+        try{
+            mul(22,4);
+        }catch(err){
+            document.getElementById("error").innerHTML = err.message;
+        }
+    
+    </script>
+    
+</body>    
+
+</html>

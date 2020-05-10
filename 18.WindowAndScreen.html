@@ -1,0 +1,69 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>setInterval and setTimeout</title>
+        <style>
+            #div1{
+                background-color:red;
+            }
+            #div2{
+                background-color:yellow;
+            }
+            #div3{
+                background-color:orange;
+            }
+            #div4{
+                background-color:deepskyblue;
+            }
+            #div5{
+                background-color: greenyellow;
+            }
+             #div6{
+                background-color: blueviolet;
+            }
+             #div7{
+                background-color: hotpink;
+            }
+            .equalBox{
+                float: left;
+                margin-left:10px;
+            }        
+        </style>
+    </head>
+    <body>
+    <body>
+<!--        Property of windows and height    -->
+        <div id="div1" class="equalBox">Div1</div>
+        <div id="div2" class="equalBox">Div2</div>
+        <div id="div3" class="equalBox">Div3</div>
+        <div id="div4" class="equalBox">Div4</div>
+         <div id="div5" class="equalBox">Div5</div>
+         <div id="div6" class="equalBox">Div6</div>
+         <div id="div7" class="equalBox">Div7</div>
+        
+        <script>
+            //mutiple || stmts BCZ it should works in all other Browsers 
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+            window.alert(windowHeight);
+            
+            var screenWidth = window.screen.width;
+            window.alert(screenWidth);
+            
+            //Available height will be less than windowHeight in pixels
+            var availableScreenHeight = window.screen.availHeight;
+            window.alert(availableScreenHeight);
+            
+            
+            //div script
+            for(var i=1;i<=7;i++){
+                document.getElementById("div"+i).style.width = window.innerWidth/7 -10+'px';//Note: -10 is left for margins and also give the units
+            
+                //Note:for height we are not dividing by 7(total no of div's) as the whole window height is to occupy
+            document.getElementById("div"+i).style.height = window.innerHeight-10+'px';//Note: -10 is left for margins and also give the units    
+            }
+            
+        </script>
+        
+    </body>    
+</html>

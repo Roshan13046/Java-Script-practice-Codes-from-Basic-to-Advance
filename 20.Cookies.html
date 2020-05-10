@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cookies</title>    
+</head>
+<body>
+   <p id="myParagraph">JavaScript</p>
+    <script>
+//       Cookies is a piece of information  which is stored in user's computer in text file it will help the webpage to remenmber some info about the user when user come's back to that page.
+//       
+        document.cookie = "username = Roshan";
+        document.cookie = "age = 4";
+        document.cookie = "country = Bangadesh";
+        window.alert(document.cookie);
+        
+        
+        var cookie = document.cookie.split(';');
+        window.alert(cookie);
+        
+        for(i=0 ;i<cookie.length;i++){
+            document.getElementById("myParagraph").innerHTML +="<br/>"+cookie[i];
+        }
+    </script>
+    
+</body>    
+
+</html>
